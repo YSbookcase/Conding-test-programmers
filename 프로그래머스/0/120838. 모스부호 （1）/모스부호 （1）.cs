@@ -1,118 +1,121 @@
 using System;
 
 public class Solution {
-    public string solution(string letter){
-    string answer = "";
+    public string solution(string letter)    {
+        string answer = "";
+       
+
+        string[] analysisWords = letter.Split(' ');
+        string[] container = new string[analysisWords.Length];
 
 
-    string[] analysisWords = letter.Split(' ');
-
-    foreach (string analysisWord in analysisWords)
-    {
-
-        switch (analysisWord)
+        for(int i =0; i < analysisWords.Length; i++)
         {
 
-
-            case ".-":
-                answer = string.Concat(answer, "a");
-                break;
-            case "-...":
-                answer = string.Concat(answer, "b");
-                break;
-            case "-.-.":
-                answer = string.Concat(answer, "c");
-                break;
-            case "-..":
-                answer = string.Concat(answer, "d");
-                break;
-            case ".":
-                answer = string.Concat(answer, "e");
-                break;
+            switch (analysisWords[i])
+            {
 
 
-            case "..-.":
-                answer = string.Concat(answer, "f");
-                break;
-            case "--.":
-                answer = string.Concat(answer, "g");
-                break;
-            case "....":
-                answer = string.Concat(answer, "h");
-                break;
-            case "..":
-                answer = string.Concat(answer, "i");
-                break;
-            case ".---":
-                answer = string.Concat(answer, "j");
-                break;
-            case "-.-":
-                answer = string.Concat(answer, "k");
-                break;
-            case ".-..":
-                answer = string.Concat(answer, "l");
-                break;
-            case "--":
-                answer = string.Concat(answer, "m");
-                break;
+                case ".-":
+                    container[i] =  "a";
+                    break;
+                case "-...":
+                    container[i] = string.Concat(container[i], "b");
+                    break;
+                case "-.-.":
+                    container[i] = string.Concat(container[i], "c");
+                    break;
+                case "-..":
+                    container[i] = string.Concat(container[i], "d");
+                    break;
+                case ".":
+                    container[i] = string.Concat(container[i], "e");
+                    break;
+
+
+                case "..-.":
+                    container[i] = string.Concat(container[i], "f");
+                    break;
+                case "--.":
+                    container[i] = string.Concat(container[i], "g");
+                    break;
+                case "....":
+                    container[i] = string.Concat(container[i], "h");
+                    break;
+                case "..":
+                    container[i] = string.Concat(container[i], "i");
+                    break;
+                case ".---":
+                    container[i] = string.Concat(container[i], "j");
+                    break;
+                case "-.-":
+                    container[i] = string.Concat(container[i], "k");
+                    break;
+                case ".-..":
+                    container[i] = string.Concat(container[i], "l");
+                    break;
+                case "--":
+                    container[i] = string.Concat(container[i], "m");
+                    break;
 
 
 
 
-            case "-.":
-                answer = string.Concat(answer, "n");
-                break;
-            case "---":
-                answer = string.Concat(answer, "o");
-                break;
-            case ".--.":
-                answer = string.Concat(answer, "p");
-                break;
-            case "--.-":
-                answer = string.Concat(answer, "q");
-                break;
-            case ".-.":
-                answer = string.Concat(answer, "r");
-                break;
-            case "...":
-                answer = string.Concat(answer, "s");
-                break;
-            case "-":
-                answer = string.Concat(answer, "t");
-                break;
-            case "..-":
-                answer = string.Concat(answer, "u");
-                break;
-            case "...-":
-                answer = string.Concat(answer, "v");
-                break;
-            case ".--":
-                answer = string.Concat(answer, "w");
-                break;
-            case "-..-":
-                answer = string.Concat(answer, "x");
-                break;
-            case "-.--":
-                answer = string.Concat(answer, "y");
-                break;
-            case "--..":
-                answer = string.Concat(answer, "z");
-                break;
+                case "-.":
+                    container[i] = string.Concat(container[i], "n");
+                    break;
+                case "---":
+                    container[i] = string.Concat(container[i], "o");
+                    break;
+                case ".--.":
+                    container[i] = string.Concat(container[i], "p");
+                    break;
+                case "--.-":
+                    container[i] = string.Concat(container[i], "q");
+                    break;
+                case ".-.":
+                    container[i] = string.Concat(container[i], "r");
+                    break;
+                case "...":
+                    container[i] = string.Concat(container[i], "s");
+                    break;
+                case "-":
+                    container[i] = string.Concat(container[i], "t");
+                    break;
+                case "..-":
+                    container[i] = string.Concat(container[i], "u");
+                    break;
+                case "...-":
+                    container[i] = string.Concat(container[i], "v");
+                    break;
+                case ".--":
+                    container[i] = string.Concat(container[i], "w");
+                    break;
+                case "-..-":
+                    container[i] = string.Concat(container[i], "x");
+                    break;
+                case "-.--":
+                    container[i] = string.Concat(container[i], "y");
+                    break;
+                case "--..":
+                    container[i] = string.Concat(container[i], "z");
+                    break;
+
+
+            }
+
+
+
 
 
         }
 
 
 
+        answer = string.Join("", container);
 
 
+        return answer;
     }
 
-
-
-
-
-
-    return answer;
-}
 }
