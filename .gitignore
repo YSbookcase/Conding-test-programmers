@@ -1,0 +1,43 @@
+# 로컬 테스트 샌드박스 (중간 실험용, 커밋하지 않음)
+LocalTest/
+
+# Build
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Visual Studio / Rider / VS Code
+.vs/
+*.user
+*.userosscache
+*.suo
+*.rsuser
+*.sln.docstates
+.idea/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 기타 로컬
+*.log
+*.tmp
+*.temp
