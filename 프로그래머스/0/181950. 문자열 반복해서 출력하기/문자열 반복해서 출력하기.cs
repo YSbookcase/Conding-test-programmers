@@ -12,7 +12,7 @@ public class Example
         String s1 = input[0];
         int a = Int32.Parse(input[1]);
         
-        for(int i = 0; i < a; i++)
+        for (int i = 0; i < a; i++)
         {
             Console.Write(s1);
         }
